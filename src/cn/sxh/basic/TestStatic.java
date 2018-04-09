@@ -96,5 +96,6 @@ public class TestStatic {
 	public void testImport(){
 		out.println(MAX_VALUE);
 		out.println(toHexString(42));
+		out.print(b);
 	}
 }
