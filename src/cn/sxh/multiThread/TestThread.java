@@ -1,5 +1,6 @@
 package cn.sxh.multiThread;
 
+import cn.sxh.collection.bean.StageThread;
 import cn.sxh.multiThread.myThread.Actor;
 import cn.sxh.multiThread.myThread.Actress;
 
@@ -12,7 +13,8 @@ public class TestThread {
 	}
 
 	public void testArmy() {
-		System.out.println("战争开始了...");
+		StageThread stage = new StageThread();
+		stage.start();
 	}
 
 	public void testActor() {
