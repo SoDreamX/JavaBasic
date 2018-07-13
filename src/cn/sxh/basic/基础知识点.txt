@@ -1,0 +1,16 @@
+1、String,StringBuffer,StringBuilder
+	StringBuffer是线程安全的，它对所有方法都做了同步，StringBuilder是线程非安全的，所以在不涉及线程安全的场景，
+	比如方法内部，尽量使用StringBuilder，避免同步带来的消耗。
+	运行速度快慢为：StringBuilder > StringBuffer > String
+	String：适用于少量的字符串操作的情况
+　　   StringBuilder：适用于单线程下在字符缓冲区进行大量操作的情况
+　　   StringBuffer：适用多线程下在字符缓冲区进行大量操作的情况
+2、.class和getClass()的区别
+	(1)、.class用于类名，getClass()是一个final native的方法，因此用于类实例
+	(2)、.class在编译期间就确定了一个类的java.lang.Class对象，但是getClass()方法在运行期间确定一个类实例的java.lang.Class对象
+3、可变长度参数必须作为方法参数列表中的的最后一个参数且方法参数列表中只能有一个可变长度参数。(String... strs)
+4、自动拆箱和自动装箱
+	自动装箱的时候，Java虚拟机会自动调用Integer的valueOf方法；
+	自动拆箱的时候，Java虚拟机会自动调用Integer的intValue方法。
+	Byte、Short、Integer、Long、Char这几个装箱类的valueOf()方法是以128位分界线做了缓存的，假如是128以下且-128以上的值是会取缓存里面的引用的。
+	Float、Double则不是。
