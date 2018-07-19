@@ -1,12 +1,16 @@
 package cn.sxh.designPattern.wrapper;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class WashHandCook extends FilterCook {
+	Logger logger = LoggerFactory.getLogger(WashHandCook.class);
 	public WashHandCook(Cook cook) {
 		this.cook = cook;
 	}
 	@Override
 	public void cookdinner() {
-		System.out.println("做饭前洗手。");
+		logger.info("做饭前洗手。");
 		cook.cookdinner();
 	}
 

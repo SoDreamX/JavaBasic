@@ -1,11 +1,14 @@
 package cn.sxh.designPattern.wrapper;
 
-public class ChinessCook implements Cook {
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
+public class ChinessCook implements Cook {
+	Logger logger = LoggerFactory.getLogger(ChinessCook.class);
 	@Override
 	public void cookdinner() {
 		// TODO Auto-generated method stub
-		System.out.println("中国人做晚餐。。。");
+		logger.info("中国人做晚餐。。。");
 	}
 
 }

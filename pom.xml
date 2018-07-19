@@ -3,6 +3,13 @@
   <groupId>JavaBasic</groupId>
   <artifactId>JavaBasic</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+	    <groupId>ch.qos.logback</groupId>
+	    <artifactId>logback-classic</artifactId>
+	    <version>1.2.3</version>
+	</dependency>
+  </dependencies>
   <build>
     <sourceDirectory>src</sourceDirectory>
     <plugins>
@@ -12,6 +19,7 @@
         <configuration>
           <source>1.8</source>
           <target>1.8</target>
+          <encoding>GBK</encoding>
         </configuration>
       </plugin>
     </plugins>
