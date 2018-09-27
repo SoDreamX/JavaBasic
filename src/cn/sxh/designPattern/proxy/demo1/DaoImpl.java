@@ -1,4 +1,4 @@
-package cn.sxh.proxy;
+package cn.sxh.designPattern.proxy.demo1;
 
 public class DaoImpl implements Dao {
 
