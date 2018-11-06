@@ -37,13 +37,13 @@
 	isAlive():判断一个线程是否存活。
 	join():等待线程终止。
 	activeCount():程序中活跃的线程数。
-	currentThread():得到当前的线程。
+	currentThread():得到当前的线程。 
 	isDaemon():一个线程是否为守护线程。
 	setDaemon():设置线程为守护线程。
 	setPriority():设置一个线程的优先级。
 	wait():使一个线程等待。
 	notify():通知一个线程继续运行。
-六.多线程有什么用?
+六.多线程有什么用
 	1.发挥多核CPU的优势。
 	2.防止阻塞。
 	3.便于建模。
