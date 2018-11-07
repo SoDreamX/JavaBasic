@@ -22,6 +22,8 @@ public class TestMap {
 	 */
 	public void testHashMap() {
 		Map<String, Integer> hash = new HashMap<String, Integer>();
+		//HashMap同步方法
+		//Collections.synchronizedMap(hash);
 		System.out.println("HashMap的初始值:"+hash.size());
 		System.out.println("hashMap是否为空:"+(hash.isEmpty()?"是":"否"));
 		//添加元素

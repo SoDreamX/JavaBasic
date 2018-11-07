@@ -6,6 +6,7 @@ public class Client {
 		for (int i = 0; i < 10; i++)
         {
 			ConcreteProtoType clonecp = (ConcreteProtoType)cp.clone();
+			System.out.println(clonecp);
             clonecp.show();
         }
 	}

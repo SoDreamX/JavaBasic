@@ -3,11 +3,11 @@
 		a.HashMap线程不安全，HashTable线程安全，通过sychronized实现。
 		b.HashMap效率高于HashTable
 		c.HashMap的键可以为null,HashTable不可以。
-		d.多线程环境下通常也不用HashTable,因为效率比较低。HashMap可以配合Collection工具类实现线程安全。
+		d.多线程环境下通常也不用HashTable,因为效率比较低。HashMap可以配合Collections工具类实现线程安全。
 		  也可以用ConcurrentHashMap,其线程安全是通过lock方式实现的，因此效率高于HashTable。
 	(2)、数组，链表，哈希表
 		数组是连续的存储空间，查找快，存储增删慢。
-		链表存储空间不连续，守卫首位存储上下节点的信息，所以寻址麻烦。查找速度慢，增删数据快。
+		链表存储空间不连续，首尾存储上下节点的信息，所以寻址麻烦。查找速度慢，增删数据快。
 		哈希表综合了以上两个的特点，一个哈希表由数组和链表组成。
 	(3)、Hash碰撞
 		不同的key根据hash算法算出的值可能一样。
