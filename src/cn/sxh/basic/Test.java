@@ -28,10 +28,24 @@ public class Test {
 	}
 	
 	public static void main(String[] args) {
+		Test test = new Test();
+		test.testByte();
+	}
+	
+	public void testByte() {
+		int i = 100;
+		byte b = (byte) i;
+		System.out.println(b);
+		
+		i = 130;
+		b = (byte) i;
+		System.out.println(b);
+	}
+	
+	public void testShort() {
 		short s1 = 1;
 		//s1 = s1+1;
 		s1+=1;
 		System.out.println(s1);
 	}
-	
 }
