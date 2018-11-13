@@ -1,5 +1,8 @@
 package cn.sxh.basic;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 import cn.sxh.basic.TestStatic;
 /**
  * @author sxh
@@ -25,11 +28,6 @@ public class Test {
 		System.out.println(TestStatic.b);
 		//调用类的静态常量的时候，是不会加载类
 		System.out.println(TestStatic.FINALVALUE);
-	}
-	
-	public static void main(String[] args) {
-		Test test = new Test();
-		test.testIntern();
 	}
 	
 	public void testByte() {
@@ -86,5 +84,46 @@ public class Test {
         System.out.println(s1 == s6);//false
         System.out.println(s1 == s6.intern());//true
         System.out.println(s2 == s2.intern());//false
+	}
+	/**
+	 * 递归获取字符串反转
+	 * @param strValue
+	 * @return
+	 */
+	public String testStrReverse(String strValue) {
+		System.out.println("strValue========="+strValue);
+		if(strValue==null || strValue.length()==0) {
+			return strValue;
+		}
+		return testStrReverse(strValue.substring(1))+strValue.charAt(0);
+	}
+	/**
+	 * 时间获取，格式化
+	 */
+	public void testDate() {
+		//格式化
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		//当前日期信息
+		Calendar cal = Calendar.getInstance();
+		System.out.println(cal.get(Calendar.YEAR));
+		System.out.println(cal.get(Calendar.MONTH));
+		System.out.println(cal.get(Calendar.DATE));
+		System.out.println(cal.get(Calendar.HOUR_OF_DAY));
+		System.out.println(sdf.format(cal.getTime()));
+		//前一天的日期
+		cal.add(Calendar.DATE, -1);
+		System.out.println(cal.get(Calendar.DATE));
+		System.out.println(sdf.format(cal.getTime()));
+		//获取当月最后一天
+		int date = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
+		System.out.println(date);
+	}
+	public static void main(String[] args) {
+		Test test = new Test();
+		String strValue = "hello World!";
+		String result = test.testStrReverse(strValue);
+		System.out.println("result=========="+result);
+		
+		test.testDate();
 	}
 }
